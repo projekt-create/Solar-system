@@ -1,0 +1,546 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik";
+}
+
+body {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.registar {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #000000;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 50%, rgb(255, 225, 0) 100%);
+}
+.registar__blackhole {
+  max-width: 900px;
+  max-height: 900px;
+  width: 120%;
+  height: 120%;
+  background: #000;
+  box-shadow: 0 0 25px rgba(255, 180, 80, 0.7), 0 0 60px rgba(255, 150, 40, 0.5), 0 0 120px rgba(255, 120, 20, 0.35), inset 0 0 40px rgba(255, 200, 150, 0.4);
+  background: linear-gradient(135deg, #0d0d0d 0%, #3c1f0f 25%, #e2872a 50%, #f7d9a4 75%, #ffffff 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  animation: core 10s infinite linear;
+}
+@keyframes core {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.registar__blackhole__core {
+  max-width: 640px;
+  max-height: 644px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 0 25px rgba(255, 180, 80, 0.7), 0 0 60px rgba(255, 150, 40, 0.5), 0 0 120px rgba(255, 120, 20, 0.35), inset 0 0 40px rgba(255, 200, 150, 0.4);
+  background: #000;
+  transform: translate(-50%, -50%);
+  animation: blackhole 10s infinite linear;
+}
+@keyframes blackhole {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.registar__blackhole__ray {
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  animation: ray 7s infinite linear;
+}
+@keyframes ray {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.registar__blackhole__ray2 {
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  animation: ray2 7s infinite linear;
+}
+@keyframes ray2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.registar__title {
+  color: #fff;
+  font-size: 46px;
+  margin-bottom: 20px;
+  background: #F8FFE8;
+  background: linear-gradient(to right, #ffee00 0%, #000000 65%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.registar__wrapper {
+  width: auto;
+  height: auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  gap: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.registar__form {
+  width: auto;
+  height: auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  transition: all 3s ease;
+}
+.registar__submit, .registar__cancel {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.registar__button {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #ff9800;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.registar__button:hover {
+  background: #e68900;
+}
+.registar__button__cancel {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #f44336;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.registar__button__cancel:hover {
+  background: #d32f2f;
+}
+.registar__input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: inherit;
+  color: #000;
+  transition: border 0.3s ease;
+}
+.registar__input:focus {
+  outline: none;
+  border: 2px solid #ff9800;
+}
+.registar__checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #6d6d6d;
+  border-radius: 5px;
+  background: inherit;
+  transition: color 0.3s ease;
+}
+.registar__checkbox:hover {
+  color: #ff9800;
+}
+.registar__checkbox__box {
+  width: 90%;
+  height: auto;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+  border: 2px solid #a7a7a7;
+  border-radius: 3px;
+  background: inherit;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+.registar__checkbox__box:hover {
+  border: 2px solid #ff9800;
+}
+.registar__checkbox__button {
+  width: 100%;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  background: inherit;
+  cursor: pointer;
+  transition: border 0.3s ease;
+  color: #fff;
+  font-size: 16px;
+}
+.registar__checkbox__button:hover {
+  border: 2px solid #ff9800;
+}
+.registar__sun {
+  max-width: 740px;
+  max-height: 744px;
+  width: 80%;
+  height: 80%;
+  background: rgb(255, 217, 0);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 1500px 100px rgb(255, 196, 0);
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  animation: sun 10s infinite linear;
+}
+@keyframes sun {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.registar__sun__core {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #fff200, #ffbb00, #ffc400);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.registar__sun__corona {
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  animation: corona 5s infinite linear;
+}
+@keyframes corona {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.registar__sun__ray {
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  animation: ray 7s infinite linear;
+}
+@keyframes ray {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.registar__sun__mercury {
+  width: 20px;
+  height: 20px;
+  background: gray;
+  border-radius: 50%;
+  position: absolute;
+  top: 95%;
+  left: 80%;
+  animation: mercuryOrbit 30s infinite linear;
+}
+@keyframes mercuryOrbit {
+  0% {
+    transform: rotate(0deg) translateX(120%) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(120%) rotate(-360deg);
+  }
+}
+.registar__sun__venus {
+  width: 30px;
+  height: 30px;
+  background: #e6c27c;
+  border-radius: 50%;
+  position: absolute;
+  top: 60%;
+  left: 115%;
+  animation: venusOrbit 35s infinite linear;
+}
+@keyframes venusOrbit {
+  0% {
+    transform: rotate(0deg) translateX(150%) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150%) rotate(-360deg);
+  }
+}
+.registar__sun__earth {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(45deg, #2f9600, #2249b3);
+  border-radius: 50%;
+  position: absolute;
+  top: 80%;
+  left: 120%;
+  animation: earthOrbit 45s infinite linear;
+}
+@keyframes earthOrbit {
+  0% {
+    transform: rotate(0deg) translateX(180%) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(180%) rotate(-360deg);
+  }
+}
+.registar__sun__earth__moon {
+  width: 10px;
+  height: 10px;
+  background: #bbb;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 120%;
+  animation: moonOrbit 5s infinite linear;
+}
+@keyframes moonOrbit {
+  0% {
+    transform: rotate(0deg) translateX(150%) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150%) rotate(-360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  html, body {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100%;
+    height: 100%;
+  }
+  .registar {
+    max-width: 500px;
+    width: 100%;
+    overflow-x: hidden;
+    background: #000;
+  }
+  .registar__blackhole {
+    display: none;
+  }
+  .registar__title {
+    display: none;
+  }
+  .registar__wrapper {
+    width: 300px;
+    height: auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    z-index: 10;
+  }
+  .registar__form {
+    width: 300px;
+    height: auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 3s ease;
+  }
+  .registar__sun {
+    width: 300px;
+    height: 300px;
+    background: rgb(255, 225, 0);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 250px 40px rgb(255, 196, 0);
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    animation: sun 10s infinite linear;
+  }
+  @keyframes sun {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  .registar__sun__core {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #fff200, #ffbb00, #ffc400);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .registar__sun__corona {
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    animation: corona 5s infinite linear;
+  }
+  @keyframes corona {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .registar__sun__ray {
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    animation: ray 7s infinite linear;
+  }
+  @keyframes ray {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .registar__sun__venus {
+    width: 30px;
+    height: 30px;
+    background: #e6c27c;
+    border-radius: 50%;
+    position: absolute;
+    top: 60%;
+    left: 115%;
+    animation: venusOrbit 35s infinite linear;
+  }
+  @keyframes venusOrbit {
+    0% {
+      transform: rotate(0deg) translateX(150%) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(150%) rotate(-360deg);
+    }
+  }
+  .registar__sun__earth {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(45deg, #2f9600, #2249b3);
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 120%;
+    animation: earthOrbit 45s infinite linear;
+  }
+  @keyframes earthOrbit {
+    0% {
+      transform: rotate(0deg) translateX(180%) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(180%) rotate(-360deg);
+    }
+  }
+  .registar__sun__earth__moon {
+    width: 10px;
+    height: 10px;
+    background: #bbb;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    animation: moonOrbit 5s infinite linear;
+  }
+  @keyframes moonOrbit {
+    0% {
+      transform: rotate(0deg) translateX(150%) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(150%) rotate(-360deg);
+    }
+  }
+}/*# sourceMappingURL=style.css.map */

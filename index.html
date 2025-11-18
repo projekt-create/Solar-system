@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar system</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+<body>
+
+    <div class="registar" id="wrapper">
+        <div class="registar__blackhole">
+            <div class="registar__blackhole__ray"></div>
+            <div class="registar__blackhole__ray2"></div>
+            <div class="registar__blackhole__core">
+            </div>
+        </div>
+        <h1 class="registar__title">Solar system</h1>
+        <div class="registar__wrapper">
+            <button class="registar__button" id="registar__box">Registar</button>
+            <form class="registar__form" id="registar__form">
+                <input type="text" placeholder="Username" class="registar__input" id="username" required>
+                <input type="password" placeholder="Password" class="registar__input" id="password" required>
+                <input type="password" placeholder="Repeat password" class="registar__input"  id="password__repeat" required>
+                <input type="email" placeholder="Email" class="registar__input" id="email" required>
+                <div class="registar__checkbox">
+                    <p class="registar__checkbox__gender" id="gender__title">Gender</p>
+                    <div class="registar__checkbox__box" id="gender__box">
+                        <input type="button" value="Male" class="registar__checkbox__button" id="checked__male">
+                        <input type="button" value="Female" class="registar__checkbox__button" id="checked__female">
+                    </div>
+                </div>
+                <div class="registar__submit">
+                    <button class="registar__button" id="register">Registar</button>
+                    <button class="registar__button" id="clear__register">Clear</button>
+                </div>
+                <div class="registar__cancel">
+                    <button class="registar__button__cancel" id="cancel__register">Cancel</button>
+                </div>
+            </form>
+            <button class="registar__button" id="login__box">Login</button>
+            <form class="registar__form" id="login__form">
+                <input type="text" placeholder="Username" class="registar__input" id="username__login" required>
+                <input type="password" placeholder="Password" class="registar__input" id="password__login" required>
+                <div class="registar__submit">
+                    <button class="registar__button" id="login">Login</button>
+                    <button class="registar__button" id="clear__login">Clear</button>
+                </div>
+                <div class="registar__cancel">
+                    <button class="registar__button__cancel" id="cancel__login">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div class="registar__sun">
+            <div class="registar__sun__core"></div>
+            <div class="registar__sun__corona"></div>
+            <div class="registar__sun__ray"></div>
+            <div class="registar__sun__mercury"></div>
+            <div class="registar__sun__venus"></div>
+            <div class="registar__sun__earth">
+                <div class="registar__sun__earth__moon"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="planet">
+        <div class="sun">
+            <div class="sun__model">
+                <div class="sun__model__core"></div>
+                <div class="sun__model__corona"></div>
+                <div class="sun__model__ray"></div>
+            </div>
+            <div class="sun__info">
+                <h1 class="sun__info__title">Sun</h1>
+                <p class="sun__info__text">
+                    The Sun is the star at the center of the Solar System. It is a almost perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo.
+                </p>
+            </div>
+        </div>
+    
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
