@@ -20,6 +20,22 @@ const GenderBox = document.querySelector('#gender__box');
 const GenderTitle = document.querySelector('#gender__title');
 const MaleButton = document.querySelector('#checked__male');
 const FemaleButton = document.querySelector('#checked__female');
+const Planet = document.querySelectorAll('#planet');
+const Body = document.querySelector('body');
+const Age = document.querySelector('#age');
+const Profile = document.querySelector('#profile');
+const Info = document.querySelector('#info');
+const ProfileName = document.querySelector('#name__text');
+const ProfileEmail = document.querySelector('#email__text');
+const ProfileGender = document.querySelector('#gender__text');
+const ProfileAge = document.querySelector('#age__text');
+
+
+// Variables
+
+let usernameValue = '';
+let passwordValue = '';
+
 
 
 // Function to clear input fields
@@ -61,6 +77,7 @@ ClearLoginButton.addEventListener('click', () => {
     PasswordInput.value = '';
 });
 
+
 UserNameInput.addEventListener('input', (e) => {
     e.preventDefault();
     let username = UserNameInput.value.trim().toUpperCase();
@@ -68,6 +85,7 @@ UserNameInput.addEventListener('input', (e) => {
         usernamelength = username.length;
         for (let i = 0; i < usernamelength; i++) {
             for (let j = 0; j < usernamelength; j++) {
+                usernameValue = UserNameInput.value.trim();
                 if (username[i] === username[j] && i !== j) {
                     UserNameInput.value = UserNameInput.value.slice(0, i) + UserNameInput.value.slice(i + 1);
                     i--;
@@ -116,14 +134,21 @@ RegisterButton.addEventListener('click', (e) => {
     e.preventDefault();
     let boll = '';
     if (PasswordInput.value === PasswordRepeatInput.value) {
+        passwordValue = PasswordInput.value.trim();
         if (EmailInput.value.includes('@gmail.com') || EmailInput.value.includes('@yahoo.com') || EmailInput.value.includes('@hotmail.com') || EmailInput.value.includes('@outlook.com')) {
-            if (GenderTitle.innerHTML === 'Male' || GenderTitle.innerHTML === 'Female'){
-                UserNameInput.style.border = '1px solid green';
-                PasswordInput.style.border = '1px solid green';
-                PasswordRepeatInput.style.border = '1px solid green';
-                EmailInput.style.border = '1px solid green';
-                GenderTitle.style.border = '1px solid green';
-                boll = 'true';
+            if (Age.value >= 18 && Age.value <= 100) {
+                if (GenderTitle.innerHTML === 'Male' || GenderTitle.innerHTML === 'Female'){
+                    UserNameInput.style.border = '1px solid green';
+                    PasswordInput.style.border = '1px solid green';
+                    PasswordRepeatInput.style.border = '1px solid green';
+                    EmailInput.style.border = '1px solid green';
+                    GenderTitle.style.border = '1px solid green';
+                    Age.style.border = '1px solid green';
+                    boll = 'true';
+                }
+                else {
+                    GenderBox.style.border = '1px solid red';
+                }
             }
             else {
                 GenderBox.style.border = '1px solid red';
@@ -137,8 +162,48 @@ RegisterButton.addEventListener('click', (e) => {
     }
     if (boll === 'true') {
         Wrapper.style.display = 'none';
+        Planet.forEach(planet => planet.style.display = 'block');
+        Body.style.overflow = "hidden";
     }
 });
+
+LoginButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    let boll = '';
+    if (UserNameLoginInput.value === usernameValue && PasswordLoginInput.value === passwordValue) {
+        UserNameLoginInput.style.border = '1px solid green';
+        PasswordLoginInput.style.border = '1px solid green';
+        boll = 'true';
+        UserNameLoginInput.value = '';
+        PasswordLoginInput.value = '';
+    }
+    else {
+        UserNameLoginInput.style.border = '1px solid red';
+        PasswordLoginInput.style.border = '1px solid red';
+    }
+    if (boll === 'true') {
+        Wrapper.style.display = 'none';
+        Planet.forEach(planet => planet.style.display = 'flex');
+        Body.style.overflow = "hidden";
+    }
+});
+
+Profile.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    Info.style.display = 'flex';
+
+    ProfileName.innerHTML =  `Name: ${usernameValue}`;
+    ProfileEmail.innerHTML = `Email: ${EmailInput.value}`;
+    ProfileGender.innerHTML = `Gender: ${GenderTitle.innerHTML}`;
+    ProfileAge.innerHTML = `Age: ${Age.value}`;
+});
+
+Info.addEventListener('click', (e) => {
+    e.preventDefault();
+    Info.style.display = 'none';
+});
+
 
 
 

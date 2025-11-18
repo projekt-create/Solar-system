@@ -24,6 +24,7 @@
                 <input type="password" placeholder="Password" class="registar__input" id="password" required>
                 <input type="password" placeholder="Repeat password" class="registar__input"  id="password__repeat" required>
                 <input type="email" placeholder="Email" class="registar__input" id="email" required>
+                <input type="number" placeholder="Age" class="registar__input" id="age" required>
                 <div class="registar__checkbox">
                     <p class="registar__checkbox__gender" id="gender__title">Gender</p>
                     <div class="registar__checkbox__box" id="gender__box">
@@ -64,21 +65,80 @@
         </div>
     </div>
 
-    <div class="planet">
-        <div class="sun">
-            <div class="sun__model">
-                <div class="sun__model__core"></div>
-                <div class="sun__model__corona"></div>
-                <div class="sun__model__ray"></div>
+    <div class="planet" id="planet">
+        <div class="header">
+            <h1 class="header__title">Solar system</h1>
+            <div class="header__list">
+                <p class="header__list__item" >Sun</p>
+                <p class="header__list__item" >Mercury</p>
+                <p class="header__list__item" >Venus</p>
+                <p class="header__list__item" >Earth</p>
+                <p class="header__list__item" >Mars</p>
+                <p class="header__list__item" >Jupiter</p>
+                <p class="header__list__item" >Saturn</p>
+                <p class="header__list__item" >Uranus</p>
+                <p class="header__list__item" >Neptune</p>
             </div>
-            <div class="sun__info">
-                <h1 class="sun__info__title">Sun</h1>
-                <p class="sun__info__text">
-                    The Sun is the star at the center of the Solar System. It is a almost perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo.
-                </p>
+            <div class="header__profile" id="profile">
+                <img src="img/profile.jpeg" alt="profile" class="header__profile__img">
+                <p class="header__profile__title">Profile</p>
+            </div>
+            <div class="header__info" id="info">
+                <p class="header__info__title">Information</p>
+                <p class="header__info__text" id="name__text">Name: </p>
+                <p class="header__info__text" id="email__text">Email: </p>
+                <p class="header__info__text" id="age__text">Age: </p>
+                <p class="header__info__text" id="gender__text">Gender: </p>
+                <p class="header__info__subtext">Settings</p>
+                <p class="header__info__subtext">Help</p>
+                <p class="header__info__subtext">Log out</p>
             </div>
         </div>
-    
+        <div class="menu">
+            <p class="menu__text">Sun</p>
+            <p class="menu__text">Mercury</p>
+            <p class="menu__text">Venus</p>
+            <p class="menu__text">Earth</p>
+            <p class="menu__text">Mars</p>
+            <p class="menu__text">Jupiter</p>
+            <p class="menu__text">Saturn</p>
+            <p class="menu__text">Uranus</p>
+            <p class="menu__text">Neptune</p>
+        </div>
+
+        <div class="solar-system">
+            <div class="solar-system__wrapper">
+                <div class="solar-system__neptune"></div>
+                <div class="solar-system__ring1">
+                    <div class="solar-system__uranus"></div>
+                    <div class="solar-system__ring2">
+                        <div class="solar-system__saturn"></div>
+                        <div class="solar-system__ring3">
+                            <div class="solar-system__jupiter"></div>
+                            <div class="solar-system__ring4">
+                                <div class="solar-system__mars"></div>
+                                <div class="solar-system__ring5">
+                                    <div class="solar-system__earth"></div>
+                                    <div class="solar-system__ring6">
+                                        <div class="solar-system__venus"></div>
+                                        <div class="solar-system__ring7">
+                                            <div class="solar-system__mercury"></div>
+                                            <div class="solar-system__ring8">
+                                                <div class="solar-system__sun"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="solar-system__info">
+                The solar system includes the Sun and all the objects that orbit it, such as eight planets, dwarf planets, moons, asteroids, and comets. The eight planets are divided into the four inner, rocky terrestrial planets (Mercury, Venus, Earth, and Mars) and the four outer, gas or ice giants (Jupiter, Saturn, Uranus, and Neptune). All of these celestial bodies are held together by the Sun's gravity and are located in the Orion Arm of the Milky Way galaxy.
+            </p>
+        </div>
     </div>
 
     <script src="script.js"></script>

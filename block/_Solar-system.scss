@@ -1,0 +1,54 @@
+.solar-system{
+    width: 1500px;
+    height: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+
+    &__wrapper {
+        width: 700px;
+        height: 380px;
+        border-radius: 50%;
+        border: 1px solid #555555;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        
+        &:hover { transform: scale(1.1); transition: 0.3s; }
+    }
+
+    &__neptune{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: #006eff;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        animation: neptune 10s infinite linear;
+        @keyframes neptune{
+            0%{
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100%{
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+        
+    }
+
+    &__info{
+        width: 400px;
+        font-size: 16px;
+        color: #fff
+    }
+}
